@@ -1,99 +1,75 @@
+/* Global Styles */
 * {
-  font-family: "Verdana", cursive, sans-serif;
+  font-family: "Arial", sans-serif; /* Change font-family to your choice */
 }
 body {
-  background-color: #7cc6fe;
-  /* background-image: url(./assets/images/bg.jpg); */
+  background-color: #f0f0f0; /* Change background color */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
 }
 
+/* App Container */
 .App {
-  background-color: #252d4a;
-  /* background-color: #0083c0; */
-  height: 50vh;
-   max-height: 600px;
-  width: 60vw;
-  max-width: 800px;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  background-color: #ffffff; /* Change to a light color or any color of your choice */
+  height: 60vh; /* Adjust height */
+  max-height: 700px; /* Adjust max height */
+  width: 70vw; /* Adjust width */
+  max-width: 900px; /* Adjust max width */
+  border-radius: 20px; /* Adjust border radius */
+  padding: 30px; /* Adjust padding */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Adjust shadow */
 }
-/* /////////////////////////////////////////////// */
-/* /////////////////////  start ////////////////// */
-/* //////////////////////////////////////////////// */
-.button{
-  background: rgb(131, 5, 189);
+
+/* Button Styles */
+.button,
+.startButton {
+  background: #3498db; /* Change button background color */
   outline: none;
   border: none;
-  padding: 10px;
-  border-radius: 4px;
-  font-weight: 300;
-  letter-spacing: 2px;
+  padding: 12px;
+  border-radius: 6px; /* Adjust border radius */
+  font-weight: 400;
+  letter-spacing: 1px;
   cursor: pointer;
-  color: white;
+  color: #ffffff; /* Change text color */
 }
-.startBox{
-  color: white;
+
+.button:hover,
+.startButton:hover {
+  background: #2980b9; /* Change hover color */
+}
+
+/* Question Section */
+.questionBox {
+  position: relative;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  color: #333; /* Change text color */
 }
-.startButton{
-  background: rgb(131, 5, 189);
-  outline: none;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  cursor: pointer;
-  color: white;
-}
-.timeInput{
-  outline: none;
-  border: none;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  text-align: center;
-}
-.timeInput::-webkit-inner-spin-button, 
-.timeInput::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-/* /////////////////////////////////////////////// */
-/* /////////////////////  question ////////////////// */
-/* //////////////////////////////////////////////// */
-.questionBox{
- position: relative;
- height: 100%;
- color: white;
-}
-.questionBox .questionHead{
+
+.questionBox .questionHead {
   display: flex;
   justify-content: space-between;
 }
-.middleBox{
+
+.middleBox {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-      "question option";
+  grid-template-columns: 2fr 1fr; /* Adjust column layout */
+  grid-template-areas: "question option";
 }
-.question{
+
+.question {
   grid-area: question;
 }
-.question p{
-  font-size: 20px;
+
+.question p {
+  font-size: 22px; /* Adjust font size */
+  color: #444; /* Change text color */
 }
-.option{
+
+.option {
   grid-area: option;
   display: flex;
   flex-direction: column;
@@ -101,81 +77,82 @@ body {
   text-align: center;
   justify-content: flex-start;
 }
-.option .text{
-  width: 80%;
-  font-size: 16px;
-  border-radius: 15px;
-  padding: 5px;
-  border: 5px solid #234668;
+
+.option .text {
+  width: 90%;
+  font-size: 18px; /* Adjust font size */
+  border-radius: 10px; /* Adjust border radius */
+  padding: 8px;
+  border: 4px solid #3498db; /* Adjust border color */
   cursor: pointer;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  background: #ecf0f1; /* Background color */
 }
-.option .text:hover{
-  background: #234668;
+
+.option .text:hover {
+  background: #bdc3c7; /* Change hover color */
 }
-.option .text input{
-  position: fixed;
-opacity: 0;
-pointer-events: none;
-}
-.selected{
-  background: rgb(131, 5, 189);
-  width: 80%;
-  font-size: 16px;
-  border-radius: 15px;
-  padding: 5px;
-  border: 5px solid #234668;
+
+.selected {
+  background: #3498db; /* Change selected background color */
+  width: 90%;
+  font-size: 18px; /* Adjust font size */
+  border-radius: 10px;
+  padding: 8px;
+  border: 4px solid #3498db; /* Adjust border color */
   cursor: pointer;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-.option .selected input{
+
+.option .selected input {
   position: fixed;
-opacity: 0;
-pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
-.questionBottom{
+
+.questionBottom {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.nextBtn{
+
+.nextBtn {
   float: right;
 }
-/* /////////////////////////////////////////////// */
-/* /////////////////////  end ////////////////// */
-/* //////////////////////////////////////////////// */
-.endBox{
+
+/* End Section */
+.endBox {
   align-items: center;
   text-align: center;
-  color: white;
-}
-.trophy{
-  height: 50px;
+  color: #333; /* Change text color */
 }
 
-/* /////////////////////////////////////////////// */
-/* /////////////////////  modal ////////////////// */
-/* //////////////////////////////////////////////// */
+.trophy {
+  height: 60px; /* Adjust height */
+}
+
+/* Modal Styles */
 .modal {
-  position: absolute;
+  position: fixed; /* Changed to fixed for full screen coverage */
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
 }
 
 .modal-main {
-  position: absolute;
-  border-radius: 10px;
-  padding: 10px;
-  background: white;
-  color: black;
-  width: 50%;
-  height: 80%;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  position: relative; /* Changed to relative for proper centering */
+  border-radius: 12px; /* Adjust border radius */
+  padding: 20px; /* Adjust padding */
+  background: #ffffff; /* Change background color */
+  color: #333; /* Change text color */
+  width: 60%; /* Adjust width */
+  max-width: 600px; /* Max width */
+  height: 70%; /* Adjust height */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   overflow: auto;
 }
 
@@ -186,36 +163,41 @@ pointer-events: none;
 .display-none {
   display: none;
 }
-.modalBody{
+
+.modalBody {
   text-align: left;
 }
-.modalBody header{
+
+.modalBody header {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 22px; /* Adjust font size */
+  padding: 12px; /* Adjust padding */
 }
-.bg-success{
-  background: #48c774;
+
+.bg-success {
+  background: #28a745; /* Adjust success color */
   color: white;
-  padding: 10px;
+  padding: 12px;
   width: 90%;
-  font-size: 13px;
+  font-size: 14px; /* Adjust font size */
   font-weight: 500;
 }
-.bg-warning{
-  background: #3273dc;
-  color: white;
-  padding: 10px;
+
+.bg-warning {
+  background: #ffc107; /* Adjust warning color */
+  color: black;
+  padding: 12px;
   width: 90%;
-  font-size: 13px;
+  font-size: 14px; /* Adjust font size */
   font-weight: 300;
 }
-.bg-danger{
-  background: #f14668;
+
+.bg-danger {
+  background: #dc3545; /* Adjust danger color */
   color: white;
-  padding: 10px;
+  padding: 12px;
   width: 90%;
-  font-size: 13px;
+  font-size: 14px; /* Adjust font size */
   font-weight: 500;
 }

@@ -1,10 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
+
 import logger from "redux-logger";
 
 import storage from "redux-persist/lib/storage";
-import { persistReducer } from "redux-persist";
-
+//import { persistReducer } from "redux-persist";
+import { persistStore, persistReducer } from 'redux-persist';
 import quizReducer from "./quizReducer";
 
 const reducers = persistReducer(
